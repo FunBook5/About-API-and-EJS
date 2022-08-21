@@ -1,0 +1,49 @@
+<!--same as a html page, all repetition things are to be included here.--> 
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To Do List App</title>
+         <link rel="stylesheet" href="css/styles.css"> <!--This won't work alone, the server has to serve up the static file--> 
+    </head>
+    <body>
+        <!--Only thing we can use apart from html is if/else in js, to use it we have to wrap it in scriplet tags -->
+        <!--Your logic should be only in server side(app.get,etc) this is for special situations only-->
+        <!-- <%if(dayToday != "Sunday"){%>
+            <h1>It is a boring day</h1>
+            <%}else{%>
+            <h1>It is a <%= dayToday %></h1>
+            <% }  %> -->
+
+             <!-- Commented above code of if/else as we wrote logic in app.get only -->
+         
+    <div class="box" id="heading">
+        <h1><%= dayToday %></h1>
+    </div>
+      
+
+        
+    <div class="box">
+        <%for(var i=0;i<newitems1.length;i++){%>
+            <div class="item">
+                <input type="checkbox">
+                <p><%= newitems1[i] %></p>
+            </div>
+            
+            <%}%>
+
+            <form class = "item" action="/" method="Post">
+                <input name = "newitem" type="text" placeholder="New Item" autocomplete="off">
+                <button type = "submit" name="button">+</button>
+            </form>
+    
+    </div>
+
+            
+           
+        
+        
+       
+        <script src="" async defer></script>
+    </body>
+</html>
